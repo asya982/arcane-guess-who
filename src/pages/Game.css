@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.tile {
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 4px;
+  align-items: center;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.tile img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.tile:hover {
+  transform: scale(1.1);
+}

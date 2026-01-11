@@ -1,13 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #39e079;
+  --color-secondary: #ff00d4;
+  --color-piltover-gold: #c8aa6e;
+  --color-piltover-dark: #1e1b16;
+  --color-brass: #b5a642;
+  --color-bronze: #8c7853;
+  --color-zinc-950: #09090b;
+  --color-background-light: #f6f8f7;
+  --color-background-dark: #122017;
+
+  --font-sans: 'Jacquard 24', 'serif';
+  --font-jinx: 'Special Elite', 'cursive';
+  --font-display: 'Newsreader';
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+    @apply font-jinx;
+}
+
+html,
+body {
+  height: 100%;
+
 }
 
 body {
-  height: 100%;
   background: linear-gradient(#0673cf, #50b6d6) no-repeat;
 }
 
@@ -17,5 +42,19 @@ a {
 }
 
 button {
+  font-size: large;
   font-family: 'Jacquard 12', system-ui;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+button:hover {
+  transform: translateY(-4px);
+}
+
+button:active {
+  transform: translateY(4px);
 }
